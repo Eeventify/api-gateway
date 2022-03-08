@@ -23,6 +23,18 @@
       ],
       "UpstreamPathTemplate": "/login/{everything}",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/registration/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-service",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/registration/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     }
   ],
   "GlobalConfiguration": {
