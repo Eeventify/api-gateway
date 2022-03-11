@@ -10,7 +10,7 @@
         }
       ],
       "UpstreamPathTemplate": "/todos/{id}",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "GET" ]
     },
     {
       "DownstreamPathTemplate": "/login/{everything}",
@@ -22,7 +22,7 @@
         }
       ],
       "UpstreamPathTemplate": "/login/{everything}",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      "UpstreamHttpMethod": []
     },
     {
       "DownstreamPathTemplate": "/registration/{everything}",
@@ -34,10 +34,22 @@
         }
       ],
       "UpstreamPathTemplate": "/registration/{everything}",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      "UpstreamHttpMethod": []
+    },
+    {
+      "DownstreamPathTemplate": "/event/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "event-service",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/event/{everything}",
+      "UpstreamHttpMethod": []
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:5001"
+    "BaseUrl": "https://localhost"
   }
 }
