@@ -1,0 +1,55 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/todos/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "jsonplaceholder.typicode.com",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/todos/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/login/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-service",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/login/{everything}",
+      "UpstreamHttpMethod": []
+    },
+    {
+      "DownstreamPathTemplate": "/registration/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-service",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/registration/{everything}",
+      "UpstreamHttpMethod": []
+    },
+    {
+      "DownstreamPathTemplate": "/event/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "event-service",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/event/{everything}",
+      "UpstreamHttpMethod": []
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost"
+  }
+}
