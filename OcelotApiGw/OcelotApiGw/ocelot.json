@@ -13,24 +13,36 @@
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
-      "DownstreamPathTemplate": "/login/{everything}",
+      "DownstreamPathTemplate": "/User/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "user-service",
-          "Port": 80
+          "Port": 5001
         }
       ],
-      "UpstreamPathTemplate": "/login/{everything}",
+      "UpstreamPathTemplate": "/User/{everything}",
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/registration/{everything}",
+      "DownstreamPathTemplate": "/Login/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "user-service",
-          "Port": 80
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/Login/{everything}",
+      "UpstreamHttpMethod": []
+    },
+    {
+      "DownstreamPathTemplate": "/Registration/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-service",
+          "Port": 5001
         }
       ],
       "UpstreamPathTemplate": "/registration/{everything}",
