@@ -37,6 +37,18 @@
       "UpstreamHttpMethod": []
     },
     {
+      "DownstreamPathTemplate": "/Login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-service",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/Login",
+      "UpstreamHttpMethod": []
+    },
+    {
       "DownstreamPathTemplate": "/Registration/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
