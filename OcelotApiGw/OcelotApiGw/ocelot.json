@@ -37,6 +37,18 @@
       "UpstreamHttpMethod": []
     },
     {
+      "DownstreamPathTemplate": "/Login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-service",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/Login",
+      "UpstreamHttpMethod": []
+    },
+    {
       "DownstreamPathTemplate": "/Registration/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -54,10 +66,34 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "event-service",
-          "Port": 80
+          "Port": 5002
         }
       ],
       "UpstreamPathTemplate": "/event/{everything}",
+      "UpstreamHttpMethod": []
+    },
+    {
+      "DownstreamPathTemplate": "/chat/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "chat-service",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/chat/{everything}",
+      "UpstreamHttpMethod": []
+    },
+    {
+      "DownstreamPathTemplate": "/interests/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "interest-service",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/interests/{everything}",
       "UpstreamHttpMethod": []
     }
   ],
