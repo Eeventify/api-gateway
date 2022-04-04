@@ -1,18 +1,6 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/todos/{id}",
-      "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "jsonplaceholder.typicode.com",
-          "Port": 443
-        }
-      ],
-      "UpstreamPathTemplate": "/todos/{id}",
-      "UpstreamHttpMethod": [ "GET" ]
-    },
-    {
       "DownstreamPathTemplate": "/User/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -61,7 +49,7 @@
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/event/{everything}",
+      "DownstreamPathTemplate": "/Event/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -69,7 +57,7 @@
           "Port": 5002
         }
       ],
-      "UpstreamPathTemplate": "/event/{everything}",
+      "UpstreamPathTemplate": "/Event/{everything}",
       "UpstreamHttpMethod": []
     },
     {
@@ -85,7 +73,7 @@
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/chat/{everything}",
+      "DownstreamPathTemplate": "/Chat/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -93,11 +81,11 @@
           "Port": 5003
         }
       ],
-      "UpstreamPathTemplate": "/chat/{everything}",
+      "UpstreamPathTemplate": "/Chat/{everything}",
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/interests/{everything}",
+      "DownstreamPathTemplate": "/Interests/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -105,11 +93,23 @@
           "Port": 5004
         }
       ],
-      "UpstreamPathTemplate": "/interests/{everything}",
+      "UpstreamPathTemplate": "/Interests/{everything}",
+      "UpstreamHttpMethod": []
+    },
+    {
+      "DownstreamPathTemplate": "/Interests",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "interest-service",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/Interests",
       "UpstreamHttpMethod": []
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost"
+    "BaseUrl": "http://office.pepr.com:25252"
   }
 }
