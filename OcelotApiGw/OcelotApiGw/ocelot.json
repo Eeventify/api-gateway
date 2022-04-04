@@ -73,6 +73,18 @@
       "UpstreamHttpMethod": []
     },
     {
+      "DownstreamPathTemplate": "/Event",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "event-service",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/Event",
+      "UpstreamHttpMethod": []
+    },
+    {
       "DownstreamPathTemplate": "/chat/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
