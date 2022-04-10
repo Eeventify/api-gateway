@@ -78,7 +78,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "chat-service",
-          "Port": 5003
+          "Port": 5004
         }
       ],
       "UpstreamPathTemplate": "/Chat/{everything}",
@@ -90,7 +90,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "interest-service",
-          "Port": 5004
+          "Port": 5003
         }
       ],
       "UpstreamPathTemplate": "/Interests/{everything}",
@@ -102,7 +102,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "interest-service",
-          "Port": 5004
+          "Port": 5003
         }
       ],
       "UpstreamPathTemplate": "/Interests",
