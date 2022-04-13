@@ -22,6 +22,14 @@ namespace OcelotApiGw
             .ConfigureServices(s =>
             {
                 s.AddOcelot();
+                s.AddCors(opt =>
+                {
+                    opt.AddDefaultPolicy(
+                        policy =>
+                        {
+                            policy.WithOrigins("https://eeventify.github.io");
+                        });
+                });
             })
             .ConfigureLogging((hostingContext, logging) =>
             {
@@ -31,6 +39,7 @@ namespace OcelotApiGw
             .Configure(app =>
             {
                 app.UseOcelot().Wait();
+                app.UseCors();
             })
             .Build()
             .Run();
