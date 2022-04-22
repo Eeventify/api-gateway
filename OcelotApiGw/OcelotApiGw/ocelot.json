@@ -73,7 +73,7 @@
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/Chat/{everything}",
+      "DownstreamPathTemplate": "/Chat",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -81,7 +81,7 @@
           "Port": 5004
         }
       ],
-      "UpstreamPathTemplate": "/Chat/{everything}",
+      "UpstreamPathTemplate": "/Chat",
       "UpstreamHttpMethod": []
     },
     {
