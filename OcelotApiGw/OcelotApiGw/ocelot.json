@@ -73,15 +73,27 @@
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/Chat",
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/Chat/",
+      "DownstreamScheme": "wss",
       "DownstreamHostAndPorts": [
         {
           "Host": "chat-service",
           "Port": 5004
         }
       ],
-      "UpstreamPathTemplate": "/Chat",
+      "UpstreamPathTemplate": "/Chat/",
+      "UpstreamHttpMethod": []
+    },
+    {
+      "DownstreamPathTemplate": "/Chat/{everything}",
+      "DownstreamScheme": "wss",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "chat-service",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/Chat/{everything}",
       "UpstreamHttpMethod": []
     },
     {
