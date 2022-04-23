@@ -74,7 +74,7 @@
     },
     {
       "DownstreamPathTemplate": "/Chat/",
-      "DownstreamScheme": "wss",
+      "DownstreamScheme": "ws",
       "DownstreamHostAndPorts": [
         {
           "Host": "chat-service",
@@ -86,7 +86,7 @@
     },
     {
       "DownstreamPathTemplate": "/Chat/{everything}",
-      "DownstreamScheme": "wss",
+      "DownstreamScheme": "ws",
       "DownstreamHostAndPorts": [
         {
           "Host": "chat-service",
