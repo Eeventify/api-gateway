@@ -73,7 +73,7 @@
       "UpstreamHttpMethod": []
     },
     {
-      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamPathTemplate": "/chat/",
       "DownstreamScheme": "ws",
       "DownstreamHostAndPorts": [
         {
@@ -81,8 +81,26 @@
           "Port": 5004
         }
       ],
-      "UpstreamPathTemplate": "/Chats/test/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
+      "UpstreamPathTemplate": "/chat/",
+      "QoSOptions": {
+        "TimeoutValue": 320000
+      },
+      "Priority": 50
+    },
+    {
+      "DownstreamPathTemplate": "/chat/{path}",
+      "DownstreamScheme": "ws",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "chat-service",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/chat/{path}",
+      "QoSOptions": {
+        "TimeoutValue": 320000
+      },
+      "Priority": 50
     },
     {
       "DownstreamPathTemplate": "/Interests/{everything}",
@@ -110,6 +128,7 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://office.pepr.com:25252"
+    "BaseUrl": "http://office.pepr.com:25252",
+    "RequestIdKey": "OcRequestId"
   }
 }
