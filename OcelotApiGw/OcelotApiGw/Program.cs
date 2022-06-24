@@ -16,8 +16,16 @@ namespace OcelotApiGw
                     .SetBasePath(hostingContext.HostingEnvironment.ContentRootPath)
                     .AddJsonFile("appsettings.json", true, true)
                     .AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", true, true)
-                    .AddJsonFile("ocelot.json")
                     .AddEnvironmentVariables();
+
+                if (File.Exists("ocelot.production.json"))
+                {
+                    config.AddJsonFile("ocelot.production.json");
+                    Console.WriteLine("Production ocelot configuration found, overwriting...");
+                } else
+                {
+                    config.AddJsonFile("ocelot.json");
+                }
             })
             .ConfigureServices(s =>
             {
